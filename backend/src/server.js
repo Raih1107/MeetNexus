@@ -20,7 +20,7 @@ app.use(express.json());
 
 
 app.use("/api/auth", authRoutes);
-app.use("/api/user", userRoutes);
+app.use("/api/users", userRoutes);
 app.use("/api/chat", chatRoutes);
 
 app.listen(PORT, ()=> {
