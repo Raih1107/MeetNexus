@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const FriendCard = ({friend}) => {
 return (
     <div className="card bg-base-200 hover:shadow-md transition-shadow">
-        <div className="card-body p-4">
+        <div className="card-body pt-4 pb-4 pr-2 pl-2">
 
           {/* USER INFO */}
         <div className="flex items-center gap-3 mb-3">
@@ -27,7 +27,7 @@ return (
             </span>
         </div>
 
-        <Link to={`/chat/${friend._id}`} className="btn btn-outline w-full"> Message </Link>
+        <Link to={`/chat/${friend._id}`} className="btn btn-outline btn-sm w-full"> Message </Link>
 
         </div>
 

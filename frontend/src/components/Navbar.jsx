@@ -3,7 +3,7 @@ import useAuthUser from '../hooks/useAuthUser'
 import { Link, useLocation } from 'react-router';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { logout } from '../lib/api';
-import { BellIcon, LogOutIcon, RadioTower } from 'lucide-react';
+import { BellIcon, HomeIcon, LogOutIcon, RadioTower } from 'lucide-react';
 import ThemeSelector from './ThemeSelector';
 import useLogout from './useLogout';
 
@@ -20,6 +20,14 @@ return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex items-center justify-end w-full">
         {/* logo - only if we are in the chatpage */}
+
+        <Link
+            to="/"
+            className="btn btn-ghost btn-circle lg:hidden"
+            title="Back to Home"
+        >
+            <HomeIcon className="h-5 w-5 text-base-content opacity-70" />
+        </Link>
 
         {isChatpage && (
         <div className="pl-5">
@@ -46,6 +54,7 @@ return (
 
         <div className="avatar">
         <div className="w-9 rounded-full">
+            
             <img src={authUser?.profilePic} alt="User Avatar" rel="noreferrer" />
         </div>
         </div>
